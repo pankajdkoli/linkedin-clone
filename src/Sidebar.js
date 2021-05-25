@@ -4,6 +4,13 @@ import './Sidebar.css';
 import background from './background.jpeg'
 
 function Sidebar() {
+    const recentItem = (topic) => (
+        <div className="sidebar_recentItem"> 
+        <span className="sidebar_hash">#</span>
+        <p>{topic}</p>
+        </div>
+    );
+
     return (
         <div className="sidebar">
 
@@ -27,6 +34,10 @@ function Sidebar() {
             </div>
                 <div className="sidebar_bottom">
                     <p>Recent</p>
+                    {recentItem('Ract')}
+                    {recentItem('node')}
+                    {recentItem('java')}
+                    {recentItem('developer')}
                 </div>
         </div>
     )
